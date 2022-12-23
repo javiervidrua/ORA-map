@@ -72,7 +72,7 @@
         // Autodetect location
         map.locate({ setView: false, watch: true }) /* This will return map so you can do chaining */
             .on('locationfound', function (e) {
-                // Only put a
+                // Only the first time
                 if (firstTime) {
                     // Center the map
                     map.setView([e.latitude, e.longitude], 16);
@@ -102,8 +102,11 @@
                 }
             })
             .on('locationerror', function (e) {
-                console.log(e);
-                alert("Location access denied by the user. Reload the page to retry.");
+                // Only the first time
+                if (firstTime) {
+                    console.log(e);
+                    alert("Location access denied by the user. Reload the page to retry.");
+                }
             });
 
         // ####################################################################
