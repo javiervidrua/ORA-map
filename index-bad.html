@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://unpkg.com/wrld.js@1.x.x"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
+  </head>
+  
+  <body>
+  <div style="position: relative">
+    <div id="map" style="height: 400px"></div>
+    <script>
+      var map = Wrld.map("map", "your_api_key_here", {
+        center: [37.780813, -122.404750],
+        zoom: 17
+      });
+
+      var polylinePoints = [
+        [37.781814, -122.404740],
+        [37.781719, -122.404637],
+        [37.781489, -122.404949],
+        [37.780704, -122.403945],
+        [37.780012, -122.404827]
+      ];            
+      
+      var polyline = Wrld.polyline(polylinePoints).addTo(map);      
+    </script>
+  </div>
+  </body>
+</html>
