@@ -54,9 +54,9 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        // Add a marker with a popup
-        // const marker = L.marker([40.9737605, -5.6591765]).addTo(map)
-        //     .bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
+        // Add a marker with a popup (Alonso de Ojeda)
+        const marker = L.marker([40.9737605, -5.6591765]).addTo(map)
+            .bindPopup('<b>Zona B</b>').openPopup();
 
         // Define what happens when clicking the map on a random point
         function onMapClick(e) {
